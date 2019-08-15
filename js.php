@@ -15,7 +15,7 @@ echo '<script> document.cookie = "'.$cookie_value.'"; </script>';
 }
 function js_console-log($log)
 {
-echo '<script>console.info("'.$log.'"); </script>';
+echo '<script>console.info("PHP: '.$log.'"); </script>';
 }
 function js_console-clear()
 {
