@@ -1,35 +1,40 @@
 <?php
 class js
 {
+function script($code)
+{
+  echo "<script>".$code."</script>";
+}
+  
 function alert($alert)
 {
-echo "<script> alert(".$alert."); </script>";
+echo "alert(".$alert.");";
 }
 
 function confirm($x,$yes,$no)
 {
 if(!isset($no)){$no = "window.history.back();";}
-echo "<script> if(confirm(".$x.")){".$yes.";}else{".$no.";} </script>";
+echo "if(confirm(".$x.")){".$yes.";}else{".$no.";}";
 }
   
 function cookie($cookie_value)
 {
-echo '<script> document.cookie = "'.$cookie_value.'"; </script>';
+echo 'document.cookie = "'.$cookie_value.'";';
 }
   
 function consoleLog($log)
 {
-echo '<script>console.info("PHP: '.$log.'"); </script>';
+echo 'console.info("PHP: '.$log.'");';
 }
   
 function consoleClear()
 {
-echo '<script> console.clear(); </script>';
+echo 'console.clear();';
 }
   
 function consoleInfo($info)
 {
-echo '<script>console.info("'.$info.'"); </script>';
+echo 'console.info("'.$info.'");';
 }
  
 }
